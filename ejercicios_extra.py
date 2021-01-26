@@ -27,7 +27,8 @@ def practica_listas():
     lista1 = []  # Lista vacia
 
     # Crear una lista de rango -5 a 5 inclusive
-
+    for i in range(-5, 6):
+        lista1.append(i)
     print('1:', lista1)
 
     # 2) Crear una lista que contengo unicamente los nùmeros
@@ -36,7 +37,9 @@ def practica_listas():
     lista2 = []  # Lista vacia
     # Crear una lista de rango -5 a 5 inclusive de 
     # solo nùmeros impares
-
+    for i in range(-5, 6):
+        if (i % 2) != 0:
+            lista2.append(i)
     print('2:', lista2)
 
     # 3) De la lista1 filtrar los números negativos, es decir,
@@ -44,7 +47,9 @@ def practica_listas():
 
     lista3 = []  # Lista vacia
     # Filtrar numeros negativos
-
+    for i in lista1:
+        if i < 0:
+            lista3.append(i)
 
     print('3:', lista3)
 
@@ -53,9 +58,9 @@ def practica_listas():
 
     lista4 = []  # Lista vacia
     # Filtrar numeros mayores a 2
-    for n in lista1:
-        if n > 3:
-            lista4.append(n)
+    for i in lista1:
+        if i > 2:
+            lista4.append(i)
 
     print('4:', lista4)
 
@@ -63,7 +68,8 @@ def practica_listas():
 
     suma_total = 0
     # Sumar numeros
-
+    for i in lista1:
+        suma_total += i
     print('5:', suma_total)
 
     # 6) De la lista1 realizar el modelo, es decir, pasar todos
@@ -71,7 +77,8 @@ def practica_listas():
 
     lista6 = []  # Lista vacia
     # Aplicar mdulo
-
+    for i in lista1:
+        lista6.append(abs(i))
     print('6:', lista6)
 
     # 7) Calcular la suma entre la lista 1 y la lista 6
@@ -80,6 +87,9 @@ def practica_listas():
 
     lista7 = []  # Lista vacia
     # Sumar listas
+    for i in range(len(lista1)):
+        suma = lista1[i] + lista6[i]
+        lista7.append(suma)
 
     print('7:', lista1)
     print('7:', lista6)
@@ -89,7 +99,8 @@ def practica_listas():
 
     lista8 = []  # Lista vacia
     # Multiplicar por dos
-
+    for i in lista1:
+        lista8.append(i*2)
     print('8:', lista8)
 
 
